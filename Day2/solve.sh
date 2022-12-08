@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rounds=0
 total_score=0
 total_wins=0
 total_ties=0
@@ -17,29 +18,39 @@ do
     X)
       player="A"
       let "round_score+=1"
+      echo "+1 for rock"
     ;;
     Y)
       player="B"
       let "round_score+=2"
+      echo "+2 for paper"
     ;;
     Z)
       player="C"
       let "round_score+=3"
+      echo "+3 for scissors"
     ;;
   esac
+
+  echo "$player vs $opponent"
 
   if [ $player = $opponent ]
   then
     let "round_score+=3"
     let "total_ties++"
+    echo "+3 for tie"
   elif ([ $player = "A" ] && [ $opponent = "C" ]) || ([ $player = "C" ] && [ $opponent = "B" ]) || ([ $player = "B" ] && [ $opponent = "A" ])
   then
     let "round_score+=6"
     let "total_wins++"
+    echo "+6 for win"
   else
     let "total_losses++"
+    echo "+0 for loss"
   fi
 
+  echo "round score: $round_score"
+  echo "current total score: $total_score"
   let "total_score+=round_score"
 done < "$input"
 

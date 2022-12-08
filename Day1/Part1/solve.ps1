@@ -1,7 +1,7 @@
 $input = Get-Content .\input.txt
 
 [int]$groupSum = 0
-[int]$totalSum
+[int]$totalSum = 0
 [int]$currentMax = 0
 
 ForEach ($line in $input)

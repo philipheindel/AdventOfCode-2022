@@ -1,4 +1,4 @@
-$input = Get-Content .\input.txt
+$inputFile = Get-Content ..\input.txt
 
 [int]$groupSum = 0
 [int]$totalSum = 0
@@ -6,7 +6,7 @@ $input = Get-Content .\input.txt
 
 [System.Collections.ArrayList]$sums = New-Object -TypeName System.Collections.ArrayList
 
-ForEach ($line in $input)
+ForEach ($line in $inputFile)
 {
     If ($line -eq "")
     {

@@ -1,10 +1,10 @@
-$input = Get-Content .\input.txt
+$inputFile = Get-Content ..\input.txt
 
 [int]$groupSum = 0
 [int]$totalSum = 0
 [int]$currentMax = 0
 
-ForEach ($line in $input)
+ForEach ($line in $inputFIle)
 {
     If ($line -eq "")
     {

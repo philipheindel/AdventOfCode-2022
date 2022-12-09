@@ -7,3 +7,5 @@ The janky solutions I'm attempting for the Advent of Code 2022
 ## Day2: Bash
 
 ## Day3: VBScript
+
+## Day3: Excel
